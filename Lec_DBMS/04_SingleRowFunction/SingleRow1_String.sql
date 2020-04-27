@@ -1,0 +1,129 @@
+-- INITCAP() 함수
+
+-- #4101
+
+-- 첫글자를 대문자로
+SELECT	INITCAP('pretty girl') 
+FROM DUAL ;
+
+
+
+-- #4102
+SELECT INITCAP(ID) 
+FROM T_STUDENT 
+WHERE DEPTNO1 = 201;
+
+
+
+-- LOWER(), UPPER
+-- #4103
+SELECT NAME 이름,ID ID,LOWER(ID) 소문자, UPPER(ID) 대문자
+FROM T_STUDENT 
+WHERE DEPTNO1 = 201;
+
+
+-- #4104
+SELECT name,ID ,LENGTH (id)
+FROM T_STUDENT 
+WHERE LENGTH(id) >= 9
+
+
+-- #4105
+SELECT NAME , LENGTH (NAME ), LENGTHB (NAME )
+FROM T_STUDENT 
+WHERE DEPTNO1  = 201;
+
+
+-- #4106
+SELECT CONCAT(name,"POSITION") 
+FROM T_PROFESSOR 
+WHERE DEPTNO = 101;
+
+
+-- #4107
+SELECT NAME , SUBSTR(JUMIN ,1,6 ) 
+FROM T_STUDENT
+WHERE DEPTNO1 = 101;
+
+
+-- #4108
+SELECT NAME , SUBSTR(JUMIN ,1,6 ) 
+FROM T_STUDENT
+WHERE JUMIN LIKE '___8%';
+
+
+-- #4109
+SELECT NAME , SUBSTR(JUMIN ,1,13) 
+FROM T_STUDENT 
+WHERE JUMIN LIKE '______2%' OR GRADE LIKE  '______4%';
+
+
+-- INSTR() 함수
+		   -- 문장 , 무었을찾나, 몆번째부터, 몆개까지
+SELECT INSTR('A*B*C*','*',1,1)FROM dual; -- 2
+SELECT INSTR('A*B*C*','*',1,2)FROM dual; -- 4
+SELECT INSTR('A*B*C*','*',3,2)FROM dual; -- 6
+SELECT INSTR('A*B*C*','*',-4,1)FROM dual; -- 2 // 음수로 찾기를시작하면 검색값도 음수방향으로 검색한다
+SELECT INSTR('A*B*C*','*',-4,2)FROM dual; -- 0 // 찾는값이 없으면 0을 리턴한다 (없다라는개념을 NULL이 아닌 0으로출력)
+SELECT INSTR('A*B*C*','*',-2,2)FROM dual; -- 2
+
+
+-- #4110
+SELECT NAME, TEL ,INSTR(TEL ,')',1,1) AS "위치"
+FROM T_STUDENT
+WHERE DEPTNO1 = 101
+
+
+-- #4111
+SELECT NAME ,TEL ,SUBSTR(TEL ,1 ,INSTR(TEL ,')' ,1,3) -1) 
+FROM T_STUDENT 
+WHERE DEPTNO1 = 101;
+
+
+-- LTRIM(), RTRIM(), TRIM()
+SELECT LTRIM('슈퍼슈퍼슈가맨', '슈퍼')LTRIM, 
+SELECT LTRIM('슈퍼퍼맨슈퍼슈가맨', '슈퍼')LTRIM, 
+LTRIM('슈퍼슈퍼슈가맨', '슈')LTRIM ,
+LTRIM('     슈퍼슈퍼슈가맨', ' ')LTRIM,
+LTRIM('  슈퍼슈가맨')LTRIM,
+RTRIM('우측 공백 제거       ')RTRIM,
+TRIM('     슈퍼맨            ')TRIM ,
+LTRIM('********10000','*')LTRIM 
+FROM DUAL ;
+
+
+-- #4117
+SELECT * FROM T_DEPT2 ;
+SELECT dname ,RTRIM(DNAME, '부')RTRIM FROM T_DEPT2 ;
+
+
+-- REPLACE 함수 // 문장에서 , 슈퍼를 , 파워로 바꿔라
+SELECT REPLACE('슈퍼맨 슈퍼걸','슈퍼','파워')
+FROM DUAL ;
+
+SELECT REPLACE ('아버지가 방에 들어가신다', ' ','')
+FROM DUAL ;
+
+-- #4118
+SELECT REPLACE (name,SUBSTR(NAME ,1,1) ,'#') AS 변경된이름,NAME 
+FROM T_STUDENT 
+WHERE DEPTNO1 = 102;
+
+
+-- #4119
+SELECT REPLACE (name,SUBSTR(name, 2,1),'#' )
+FROM T_STUDENT 
+WHERE DEPTNO1 = 101;
+
+
+-- #4120
+SELECT NAME ,REPLACE (JUMIN,SUBSTR( JUMIN ,7),'*******')
+FROM T_STUDENT 
+WHERE DEPTNO1 = 101;
+
+
+--SELECT INSTR('A*B*C*','*',1,1)FROM dual; -- 2
+-- #4121
+SELECT NAME ,TEL , REPLACE (TEL ,SUBSTR(TEL ,INSTR(TEL ,')')+1, 3),'###') 전화번호 
+FROM T_STUDENT 
+WHERE DEPTNO1 = 102;

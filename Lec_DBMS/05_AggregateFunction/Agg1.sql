@@ -1,0 +1,65 @@
+SELECT * FROM T_PROFESSOR ;
+SELECT COUNT(*), COUNT(HPAGE) FROM T_PROFESSOR ;
+SELECT COUNT(bonus), sum (bonus), avg(BONUS) FROM T_PROFESSOR ;
+SELECT MAX(HIREDATE ), min(HIREDATE ) FROM T_EMP ;
+
+-- NULL 허용 컬럼의 그룹함수 적용시
+-- nvl, nvl2 사용해야함
+
+SELECT AVG(BONUS), AVG(NVL(BONUS ,0) )
+FROM T_PROFESSOR ;
+
+-- t_professor 테이블에서 '학과별' 로 교수님들의 평균 보너스를 출력하세요
+
+-- 불가능하다 SELECT 에서 GROUP 함수와 GROUP함수가 아닌 것은 같이 출력불가
+-- SELECT DEPTNO , AVG(BONUS ) 
+SELECT DEPTNO , ROUND(AVG(NVL(BONUS,0 )),1) "보너스 평균"
+FROM T_PROFESSOR 
+--그룹이 아닌걸 그룹으로 묶어주기위해 사용한다 GROUP BY
+GROUP BY DEPTNO ;
+
+-- #5101
+SELECT DEPTNO ,POSITION ,avg(PAY)
+FROM T_PROFESSOR 
+GROUP BY DEPTNO ,POSITION -- 1. 학과별 / 2. 직급별
+ORDER BY DEPTNO ,POSITION; -- 정렬
+
+-- 부서별 평균급여 출력 / 평균급여가 450보다 많은 학과만 출력
+SELECT DEPTNO , AVG(PAY ) 
+FROM T_PROFESSOR
+WHERE AVG(PAY) > 450 -- 그룹함수는 WHERE 에서 사용 불가
+GROUP BY DEPTNO
+ORDER BY DEPTNO ;
+
+-- HAVING : WHERE 에서 계산안되는 그룹에서 구할때
+SELECT DEPTNO , ROUND(AVG(PAY ),1)
+FROM T_PROFESSOR
+GROUP BY DEPTNO
+HAVING AVG(pay) > 300 
+ORDER BY DEPTNO ;
+
+--- <SELECT 쿼리문 순서> ----
+SELECT 					--
+FROM 					--
+WHERE 					--
+GROUP BY 				--
+HAVING 					--
+ORDER BY 				--
+--------------------------
+
+-- #5102
+SELECT * FROM T_EMP ;
+
+SELECT MGR "매니저", COUNT(JOB) "직원수" , SUM(SAL) "월급", TRUNC(avg(SAL)) "월급 평균", AVG(NVL(COMM ,0) ) "교통비평균"
+FROM T_EMP
+GROUP BY MGR 
+HAVING MGR > 1;
+
+SELECT  * FROM  T_PROFESSOR ;
+
+SELECT DEPTNO , COUNT(DEPTNO), avg(SYSDATE - HIREDATE),
+
+
+FROM T_PROFESSOR 
+WHERE POSITION IN ('정교수','조교수')
+GROUP BY DEPTNO
