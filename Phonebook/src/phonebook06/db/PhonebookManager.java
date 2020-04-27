@@ -23,7 +23,8 @@ public class PhonebookManager implements Pb, Closeable {
 	Statement stmt = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
-
+	
+	//끄앙
 	// Singleton 적용
 	private PhonebookManager() {
 	
