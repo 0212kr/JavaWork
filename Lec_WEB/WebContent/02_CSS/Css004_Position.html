@@ -6,19 +6,34 @@
 
 <style>
 div.static {
-	/* TODO */
+	border: 3px solid limegreen;
+	position: static; /* 안적어도됨 기본값 */
 }
 
 div.relative {
-	/* TODO */
+	border: 3px solid orangered;
+	width: 400px;
+	position: relative;
+	/*left: 30px;*//* 왼쪽에서 부터 */
+	right: -30px;
+	top: 30px;
 }
 
 div.fixed {
-	/* TODO */
+	border: 3px solid black;
+	width: 300px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
 }
 
 div.absolute {
-	/* TODO */
+	border: 3px solid orange;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 40px;
+	right: 20px;
 }
 </style>
 
@@ -58,7 +73,7 @@ div.absolute {
 <h2>position: absolute</h2> <!-- 다음 2개 비교 -->
 <!--  부모가 relative, fixed, absolute 인 경우 -->
 <!-- TODO -->
-<div class="">부모1-relative
+<div class="" style="border: 3px solid cyan;">부모1-relative
 	<div class="absolute">absolute1</div>
 </div>
 

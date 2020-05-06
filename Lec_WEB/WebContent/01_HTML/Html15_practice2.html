@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>주문 폼 작성</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  -->
+<style>
+table{
+	width : 100%;
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+th, td {
+	padding: 2px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th {
+	text-align: left;
+	font-weight: bold;
+}
+
+table tr th bytton {
+	padding: 0;
+}
+</style>
+<!--  -->
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<body>
+
+<h2>주문자 정보</h2>
+<table>
+	<tr>
+		<th><h3>주문자정보</h3></th>
+		<th>비회원으로 상품구매시 반드시 본인인증을 하셔야 합니다. <button type="button" style="padding: 3px">휴대폰인증</button> <button type="button" style="padding: 3px">아이핀인증</button></th>
+	</tr>
+	
+	<tr>
+		<th><h3>주소</h3></th>
+		<th><input type="text" name="juso1" value="" disabled> <button type="button">주소찾기</button> <input type="checkbox" name="savejuso" value="savejuso">배송지 목록에 추가<br></th>
+	</tr>
+	
+	<tr>
+		<th></th>
+		<th><input type="text" name="juso2" value="" disabled style="width: 500px" >
+	</tr>
+	
+	<tr>
+		<th></th>
+		<th><input type="text" name="juso3" value="" style="width: 500px" >
+	</tr>
+	
+	<tr>
+		<th><h3>휴대전화</h3></th>
+		<th>  <select name = "phonefirstnumber">
+  	<option value="010">010</option>
+  	<option value="011">011</option>
+  </select> - 
+  <input type="text" name="juso3" value="" style="width: 60px" > -
+  <input type="text" name="juso3" value="" style="width: 60px" >
+  <input type="checkbox" name="savejuso" value="savejuso">SNS 수신 동의
+  
+  
+  </th>
+	</tr>
+	
+	<tr>
+		<th>이메일</th>
+		<th><input type="text" name="juso3" value="" style="width: 150px" >@<input type="text" name="juso3" value="" style="width: 150px" > 
+		<select name = "select">
+  	<option value="1">직접선택</option>
+  	<option value="gmai.com">gmail.com</option>
+  </select></th>
+	</tr>
+	
+</table>
+어쩌구 저쩌구 통신판매 당사자 솰라솰라 책임지지않겠다이거야
+<br><br><br><br><br>
+<h2>배송지 정보 입력</h2>
+	<table>
+		<tr style="background-color: #D8D8D8; border-top: 3px solid black; border-bottom: 1px solid #a8a8a8;">
+			<th><h3>배송지선택</h3></th>
+			<th><button type="button">주문자 정보와 동일</button></th>
+		</tr>
+		
+		<tr>
+			<th><h3>받으시는분</h3></th>
+			<th><input type="text" name="od" value="" style="width: 100px" ></th>
+		</tr>
+		
+		<tr>
+			<th><h3>주소</h3></th>
+			<th><input type="text" name="juso4" value="" disabled style="width: 100px" >
+			<button type="button">주소찾기</button> <input type="checkbox" name="savejuso" value="savejuso">배송지 목록에 추가
+		</tr>
+		
+		<tr>
+			<th></th>
+			<th><input type="text" name="juso4" value="" disabled style="width: 500px" ></th>
+		</tr>
+		<tr>
+			<th></th>
+			<th><input type="text" name="juso4" value="" style="width: 500px" ></th>
+		</tr>
+		
+		<tr>
+		<th><h3>휴대전화</h3></th>
+			<th>  <select name = "phonefirstnumber">
+		  		<option value="010">010</option>
+	  			<option value="011">011</option>
+  				</select> - 
+  				<input type="text" name="juso3" value="" style="width: 60px" > -
+  				<input type="text" name="juso3" value="" style="width: 60px" >
+  				<input type="checkbox" name="savejuso" value="savejuso">안심번호 사용(무료)
+  				<i class="fas fa-question-circle"></i>
+  				<input type="checkbox" name="savejuso" value="savejuso">집전화 추가입력
+		  	</th>
+		</tr>
+	
+		<tr>
+			<th><h3>배송시요구사항</h3></th>
+			<th><input type="text" name="juso4" value="" style="width: 500px" > (0자/50자)<br>
+			<a style="color: blue; font-size: 12px;">* 특정한 배송품 알아서 잘 요구사항에 적으세요 안들어줄꺼지만</a>
+			</th>
+		</tr>
+	</table>
+<br><br><br><br><br>
+	
+	<h2>결제정보 입력</h2>
+	<table style="width: 80%">
+		<tr style="background-color: #D8D8D8; border-top: 3px solid black;">	
+			<th><h3>신용카드</h3></th>
+			<th>
+				<input type="radio" name="sel" value="normal"checked/>신용카드(일반) 
+				<input type="radio" name="sel" value="com"/>신용카드(법인) 
+				<input type="radio" name="sel" value="f"/>해외발급카드
+			</th>
+		</tr>
+		<tr style="background-color: #D8D8D8;border-bottom: 1px solid #a8a8a8;">
+			<th><h3>현금결제</h3></th>
+			<th>
+				<input type="radio" name="sel2" value="mu"/>무통장입금 
+				<input type="radio" name="sel2" value="sil"/>실시간계좌이체 
+			</th>
+		</tr>
+		<tr>
+			<th><h3>카드선택</h3></th>
+			<th>
+				<select name = "sel3">
+				  	<option value="selplz">선택하세요</option>
+  					<option value="01">신한</option>
+  					<option value="02">국민</option>
+  					<option value="03">기타</option>
+				</select>
+			</th>
+		</tr>
+				<tr>
+			<th><h3>할부방식</h3></th>
+			<th>
+				<select name = "sel4">
+				  	<option value="hanbang">일시불</option>
+  					<option value="02">2개월</option>
+  					<option value="05">5개월</option>
+  					<option value="99">99개월</option>
+				</select>
+			</th>
+		</tr>
+		
+		<tr>
+			<th><h3>결제 안내</h3></th>
+			<th>
+				<button type="button" style="color: red; border-color: red">간편결제안내</button>
+				<button type="button">공인인증안내</button>
+				<button type="button">안전결제안내</button>
+				<button type="button">안심클릭안내</button>
+				<button type="button">해외카드발급안내</button>
+			</th>
+		</tr>
+	</table>	
+	
+
+
+
+</body>
+</html>

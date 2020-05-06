@@ -5,13 +5,13 @@
 <title>Icon</title>
 
 <!-- 반드시 아래 viewport 지정 -->
-<!-- TODO -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- font awesome 아이콘 -->
 <!-- TODO -->
 
 <!-- Google 아이콘 -->
-<!-- TODO -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 <!-- 아이콘(icon) 
@@ -30,6 +30,9 @@
 		Google 아이콘 (material-icons) : https://www.w3schools.com/icons/google_icons_intro.asp
 		※ BootStrap4 부터는 자체 아이콘 지원 안함 BootStrap3 아이콘도 호환안됨)
  -->
+ <!-- fontawsesome.com 에서 제공하는 코드 -->
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ 
 <body>
 <p>원래 &lt;i&gt; 태그는 이탤릭 체를 위한 태그(였었습니다)입니다</p>
 
@@ -40,24 +43,24 @@
 	far (font awesome regular)
  -->
 <h3>Solid vs Reqular</h3>
-<i class=""></i>
+<i class="fas fa-home"></i>
 <i class=""></i>
 <br><br>
 
 <h3>Some Font Awesome icons:</h3>
 <!-- i, span 둘다 사용 가능 -->
-<i class=""></i>
-<span class=""></span>
-<i class=""></i>
-<i class=""></i>
-<span class=""></span>
+<i class="fas fa-band-aid"></i>
+<span class="fas fa-cat"></span>
+<i class="fas fa-gragon"></i>
+<i class="fas fa-clock"></i>
+<span class="fas fa-clock"></span>
 <br><br>
 
 <h3>Styled Font Awesome icons (size, color, and shadow):</h3>
-<i class="" style="/* TODO */"></i>
-<i class="" style="/* TODO */"></i>
-<i class="" style="/* TODO */"></i>
-<i class="" style="/* TODO */"></i>
+<i class="fas fa-clock" style="font-size:24px;"></i>
+<i class="fas fa-clock" style="font-size:36px;"></i>
+<i class="fas fa-clock" style="font-size:48px;color:red;"></i>
+<i class="fas fa-clock" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
 <br><br>
 
 <h3>Sizing Icons</h3>
@@ -65,22 +68,22 @@
 아래 클래스 사용하여 컨테이너 대비한 아이콘 사이즈 조정 가능
 fa-xs, fa-sm, fa-lg, fa-2x, fa-3x, fa-4x, fa-5x, fa-6x, fa-7x, fa-8x, fa-9x, fa-10x
  -->
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
+<i class="fas fa-clock fa-xs"></i>
+<i class="fas fa-clock fa-sm"></i>
+<i class="fas fa-clock fa-lg"></i>
+<i class="fas fa-clock fa-2x"></i>
+<i class="fas fa-clock fa-5x"></i>
+<i class="fas fa-clock fa-10x"></i>
 <br><br>
 
 <h3>List Icons</h3>
 <!-- 
 fa-ul 와 fa-li 를 사용하면 list 태그의 기본 심벌(bullets) 를 대체 가능 
  -->
-<ul class="">
-  <li><span class=""><i class=""></i></span>List Item</li>
-  <li><span class=""><i class=""></i></span>List Item</li>
-  <li><span class=""><i class=""></i></span>List Item</li>
+<ul class="fa-ul">
+  <li><span class="fa-li"><i class="fas fa-check-square"></i></span>List Item</li>
+  <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>List Item</li>
+  <li><span class="fa-li"><i class="fas fa-square"></i></span>List Item</li>
 </ul>
 <br><br>
 
@@ -89,12 +92,12 @@ fa-ul 와 fa-li 를 사용하면 list 태그의 기본 심벌(bullets) 를 대�
 	fa-spin : 아이콘 회전
 	fa-pulse : 8단계로 회전
  -->
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
+<i class="fas fa-spinner fa-spin"></i>
+<i class="fas fa-circle-notch fa-spin"></i>
+<i class="fas fa-sync-alt fa-spin"></i>
+<i class="fas fa-cog fa-spin"></i>
+<i class="fas fa-cog fa-pulse"></i>
+<i class="fas fa-spinner fa-pulse"></i>
 <br><br>
 
 <h3>Rotated and Flipped Icons</h3>
@@ -102,12 +105,12 @@ fa-ul 와 fa-li 를 사용하면 list 태그의 기본 심벌(bullets) 를 대�
 	fa-rotate-*  : 회전     
 	fa-flip-*  : 뒤집기
  -->
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
-<i class=""></i>
+<i class="fas fa-horse"></i>
+<i class="fas fa-horse fa-rotate-90"></i>
+<i class="fas fa-horse fa-rotate-180"></i>
+<i class="fas fa-horse fa-rotate-270"></i>
+<i class="fas fa-horse fa-flip-horizontal"></i>
+<i class="fas fa-horse fa-flip-vertical"></i>
 <br><br>
 
 <h3>Stacked Icons</h3>
@@ -118,22 +121,22 @@ fa-ul 와 fa-li 를 사용하면 list 태그의 기본 심벌(bullets) 를 대�
 	fa-stack-2x : 큰 size
 	fa-inverse : 색상 반전
  -->
-<span class="">
-  <i class=""></i>
-  <i class=""></i>
+<span class="fa-stack fa-lg">
+  <i class="fas fa-circle fa-stack-2x"></i>
+  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 </span>
 fa-twitter (inverse) on fa-circle (solid)<br>
 
-<span class="">
-  <i class=""></i>
-  <i class=""></i>
+<span class="fa-stack fa-lg">
+  <i class="far fa-circle fa-stack-2x"></i>
+  <i class="fab fa-twitter fa-stack-1x"></i>
 </span>
 fa-twitter on fa-circle (regular)<br>
 
 
-<span class="">
-  <i class=""></i>
-  <i class="" style="color:red;"></i>
+<span class="fa-stack fa-lg">
+  <i class="fas fa-camera fa-stack-1x"></i>
+  <i class="fas fa-ban fa-stack-2x" style="color: red;"></i>
 </span>
 fa-ban on fa-camera
 <br><br>
@@ -145,14 +148,16 @@ fa-ban on fa-camera
 	fa-fw  를 사용하여 동일한 너비가 되도록 하자.
  -->
 <p>Fixed Width:</p>
-<div><i class=""></i> Icon 1</div>
-<div><i class=""></i> Icon 2</div>
-<div><i class=""></i> Icon 3</div>
+<div><i class="fas fa-arrows-alt-v fa-fw"></i> Icon 1</div>
+<div><i class="fas fa-band-aid fa-fw"></i> Icon 2</div>
+<div><i class="fab fa-bluetooth-b fa-fw"></i> Icon 3</div>
+
 
 <p>Without Fixed Width:</p>
-<div><i class=""></i> Icon 1</div>
-<div><i class=""></i> Icon 2</div>
-<div><i class=""></i> Icon 3</div>
+<div><i class="fas fa-arrows-alt-v"></i> Icon 1</div>
+<div><i class="fas fa-band-aid"></i> Icon 2</div>
+<div><i class="fab fa-bluetooth-b"></i> Icon 3</div>
+
 <br><br>
 
 <h3>Bordered and Pulled Icons</h3>
@@ -161,7 +166,7 @@ fa-ban on fa-camera
 	fa-pull-right, fa-pull-left : 
  -->
 <div>
-<i class=""></i>
+<i class="fas fa-quote-left fa-3x fa-border fa-pull-left"></i>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </div>
 <br><br>
@@ -169,18 +174,24 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 <h2><a href="https://material.io/icons/">Google 아이콘 (material-icons)</a></h2>
 <h3>Some Google icons:</h3>
-<i class="">cloud</i>
-<i class="">favorite</i>
-<i class="">attachment</i>
-<i class="">computer</i>
-<i class="">traffic</i>
+<i class="material-icons">cloud</i>
+<i class="material-icons">favorite</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+
+
+
 <br><br>
 
 <h3>Styled Google icons (size and color):</h3>
-<i class="" style="/* TODO */">cloud</i>
-<i class="" style="/* TODO */">cloud</i>
-<i class="" style="/* TODO */">cloud</i>
-<i class="" style="/* TODO */">cloud</i>
+<i class="material-icons" style="font-size:24px;">cloud</i>
+<i class="material-icons" style="font-size:36px;">cloud</i>
+<i class="material-icons" style="font-size:48px;color:red;">cloud</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;">cloud</i>
+
+
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

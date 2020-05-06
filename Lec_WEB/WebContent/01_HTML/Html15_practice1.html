@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>캘린더</title>
+<style>
+table{
+	width : 100%;
+    border: 1px solid #d8d8d8;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+ #t0 th{
+ 	
+ }
+ 
+ #t1 tr th{
+	border: 1px solid #a8a8a8;
+}
+ #t2 tr th{
+ 	border-bottom: 1px solid #a8a8a8;
+ }
+  #c1 span{
+  	font-size: 30px;
+  }
+  
+  .btn-group button {
+  background-color:#a8a8a8; 
+  border: 1px solid gray; 
+  color: white; 
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+  width: 25%
+}
+
+ .btn-group button:hover {
+  background-color: cyan;
+}
+
+ .btn1 button{
+  background-color:#ffffff; 
+  border: 1px solid #ffffff; 
+  color: black; 
+  padding: 10px 24px;
+  cursor: pointer;
+  float: none;
+ }
+ 
+ .btn2 button{
+   background-color:blue; 
+  border: 1px solid blue; 
+  color: white; 
+ }
+</style>
+</head>
+<body>
+	<table id="t0" style="background: #d7d7d7; border: none; ">
+		<tr style="border: none;">
+			<div class="btn-group">
+  			<button>HTML</button>
+  			<button>CSS</button>
+  			<button>JS</button>
+  			<button>JQ</button>
+			</div>
+		</tr>
+	</table>
+	<center id="c1">
+	<span>&lt</span>
+	<span style="color: blue;"> 2015-06-17 </span>
+	<span>&gt</span>
+	</center>
+	<table style="width: 100%; border: 1px solid #e8e8e8;">
+			<tr>
+				<th>
+					<input type="radio" name="sel1" value="all" checked/>전체
+					<input type="radio" name="sel1" value="01"/>창업*밴처
+					<input type="radio" name="sel1" value="02"/>소상공인
+					<input type="radio" name="sel1" value="03"/>판로*수출
+					<input type="radio" name="sel1" value="04"/>R&D
+					<input type="radio" name="sel1" value="05"/>금융*세제
+					<input type="radio" name="sel1" value="06"/>인력
+				</th>
+			</tr>
+		<table id="t1" style="width: 100; border:  1px solid #a8a8a8;">
+			<tr style="background: #e8e8e8">
+				<th><h4>일</h4></th>
+				<th><h4>월</h4></th>
+				<th><h4>화</h4></th>
+				<th><h4>수</h4></th>
+				<th><h4>목</h4></th>
+				<th><h4>금</h4></th>
+				<th><h4>토</h4></th>
+			</tr>
+			
+			<tr>
+				<th></th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+			</tr>
+			
+			<tr>
+				<th style="background-color: cyan;">7</th>
+				<th>8</th>
+				<th>9</th>
+				<th>10</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+			</tr>
+			
+			<tr>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+			</tr>
+			
+			<tr>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+				<th>24</th>
+				<th>25</th>
+				<th>26</th>
+				<th>27</th>
+			</tr>
+			
+			<tr>
+				<th>28</th>
+				<th>29</th>
+				<th>30</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</table>
+	</table>
+	
+	<br>
+	<span style="color: red; font-weight: 700;"> * 2015년 6월 7일, 전체 </span>
+	<span>검색결과,</span>
+	<span style="font-weight: 700;">진행중인 사업</span>
+	<span>은 </span>
+	<span style="color: red; font-weight: 700">총 614 건 </span>
+	<span>입니다.</span>
+	
+	<table id="t2" style="border-left: none;border-right: none;border-top: 2px solid #b8b8b8;">
+		<tr style="border-bottom: 2px solid #b8b8b8;background-color: #e8e8e8;">
+			<th>번호</th">
+			<th>지원사업명</th>
+			<th>주관부처</th>
+			<th>신청기간</th>
+			<th>조회</th>
+		</tr>
+		
+		<tr>
+			<th>1</th>
+			<th>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..<span style="border: 1px solid red; color: red; margin: 7px; border-style: double;">on-line</span></th>
+			<th>중소기업청</th>
+			<th>2015-06-04 ~ 2015-06-30</th>
+			<th>731</th>
+		</tr>
+		
+		<tr>
+			<th>10</th>
+			<th>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..<span style="border: 1px solid red; color: red; margin: 7px; border-style: double;">on-line</span></th>
+			<th>중소기업청</th>
+			<th>2015-06-04 ~ 2015-06-30</th>
+			<th>731</th>
+		</tr>
+		
+		<tr>
+			<th>614</th>
+			<th>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..<span style="border: 1px solid red; color: red; margin: 7px; border-style: double;">on-line</span></th>
+			<th>중소기업청</th>
+			<th>2015-06-04 ~ 2015-06-30</th>
+			<th>731</th>
+		</tr>
+		
+		<tr>
+			<th>614</th>
+			<th>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..<span style="border: 1px solid red; color: red; margin: 7px; border-style: double;">on-line</span></th>
+			<th>중소기업청</th>
+			<th>2015-06-04 ~ 2015-06-30</th>
+			<th>731</th>
+		</tr>
+	</table>
+	<br>
+	<div class="btn1">
+		<center>
+			<button style="border: 1px solid black;">&lt&lt</button>
+			<button style="border: 1px solid black;">&lt</button>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+			<button style="border: 1px solid black;">&gt</button>
+			<button style="border: 1px solid black;">&gt&gt</button>
+		</center>
+	</div>
+	<br>
+	<table class="btn2" style="background-color: gray; margin: 5px; width: 100%">
+		<tr>
+			<th>
+				<center>
+					<select name = "sq" size="1">
+  					<option value="k">키워드</option>
+  					<option value="e">기타</option>
+  					<option value="e2">기타2</option>
+  					</select>
+  					<input type="text" name="juso3" value="" style="width: 150px" >
+  					<button type="button">검색</button>
+				</center>
+				
+			</th>
+		</tr>
+	</table>
+	
+	
+	
+</body>
+</html>
