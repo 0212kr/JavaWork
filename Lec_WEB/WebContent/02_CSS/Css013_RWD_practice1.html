@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {box-sizing: border-box;/* RWD 필수 */}
+
+        [class*="col-"]{
+        float: left;
+        width: 100%;
+        
+        }
+
+        div{
+            padding: 5px;
+        }
+
+    .a1{height: 25px;}
+    .a2{height: 25px;}
+    .a3{height: 25px;}
+    .a4{height: 50px;}
+    .a5{height: 25px;}
+    .a6{height: 25px;}
+    .a7{height: 25px;}
+    .a8{height: 25px;}
+        .a1{background-color: blueviolet;}
+        .a2{background-color: violet;}
+        .a3{background-color: cyan;}
+        .a4{border: 1px solid black; background-color: white;}
+        .a5{background-color: wheat;}
+        .a6{background-color: greenyellow;}
+        .a7{background-color: whitesmoke;}
+        .a8{background-color: yellow;}
+        .col-4 {width: 33.33%; height: 33.33%;}
+
+        @media screen and (max-width: 599px){
+            .a1{display: none;}
+        }
+
+    @media screen and (min-width: 600px){
+    .col-m-1 {width: 8.33%;}  /* 1칸 짜리 폭 */
+    .col-m-2 {width: 16.66%;}  /* 2칸 짜리 폭 */
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+    .a1{height: 25px;}
+    .a2{height: 25px;}
+    .a3{height: 60px;}
+    .a4{height: 60px;}
+    .a5{height: 30px;}
+    .a6{height: 30px;}
+    .a7{height: 25px;}
+    .a8{height: 25px;}
+    
+    .b1{padding-bottom: 0px;}
+    .b2{padding-top: 0px;}
+    
+    
+    
+    }
+
+    @media screen and (min-width: 768px){
+    .col-pc-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+    .col-pc-2 {width: 16.66%;}  /* 2칸 짜리 폭 */
+    .col-pc-3 {width: 25%;}
+    .col-pc-4 {width: 33.33%; padding: 5px;}
+    .col-pc-5 {width: 41.66%;}
+    .col-pc-6 {width: 50%;}
+    .col-pc-7 {width: 58.33%;}
+    .col-pc-8 {width: 66.66%;}
+    .col-pc-9 {width: 75%;}
+    .col-pc-10 {width: 83.33%;}
+    .col-pc-11 {width: 91.66%;}
+    .col-pc-12 {width: 100%;}
+
+    .a1{height: 25px;}
+    .a2{height: 25px;}
+    .a3{height: 95px;}
+    .a4{height: 95px;}
+    .a5{height: 25px;}
+    .a6{height: 25px;}
+    .a7{height: 25px;}
+    .a8{height: 25px;}
+    }
+    
+       
+    .clear{
+        clear: both;
+    }
+
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="col-m-2 col-pc-4">
+        <li class="a1">a</li>
+    </div>
+
+    <div class="col-m-10 col-pc-8">
+        <li class="a2">b</li>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="col-m-2 col-pc2">
+        <li class="a3">c</li>
+    </div>
+
+    <div class="col-m-8 col-pc-6">
+        <li class="a4">d</li>
+    </div>
+
+    <div class="col-4 b1 col-m-2 col-pc-4">
+        <li class="a5">e</li>
+    </div>
+
+    <div class="col-4 b2 col-m-2 col-pc-4">
+        <li class="a6">f</li>
+    </div>
+
+    <div class="col-4 col-m-3 col-pc-4">
+        <li class="a7">g</li>
+    </div>
+
+    <div class="col-m-9 col-pc-12">
+        <li class="a8">h</li>
+    </div>
+
+</body>
+</html>
